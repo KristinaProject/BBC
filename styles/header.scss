@@ -1,0 +1,280 @@
+@use "mixins.scss" as mix;
+@use "variables.scss" as lock;
+
+header {
+  background-color: black;
+  height: 64px;
+  @include mix.flex;
+  @include mix.j-c-center;
+
+  .header__container {
+    color: lock.$white-text-color;
+    @include mix.all-height;
+    @include mix.flex;
+    justify-content: space-between;
+
+    .logo__container {
+      @include mix.flex;
+      @include mix.all-height;
+      justify-content: space-between;
+
+      #bbc {
+        width: 112px;
+        height: 32px;
+        cursor: lock.$pointer;
+      }
+
+      .account {
+        @include mix.hover-height;
+        @include mix.flex;
+        
+        a {
+          @include mix.flex;
+          padding-left: 20px;
+          margin-right: 100px;
+          @include mix.links;
+          font-size: lock.$f-s-small;
+          font-weight: lock.$f-w-bold;
+          cursor: lock.$pointer;
+
+          img {
+            width: 28px;
+            margin-right: 6px;
+          }
+        }
+      }
+
+      hr {
+        height: 40%;
+        border: 0.1px solid rgb(49, 49, 49);
+      }
+    }
+
+    .double {
+      @include mix.flex;
+      @include mix.all-width;
+      @include mix.all-height;
+
+      .features {
+        @include mix.flex;
+        @include mix.all-width;
+        @include mix.all-height;
+
+        ul {
+          @include mix.flex;
+          @include mix.all-width;
+          justify-content: space-between;
+          list-style-type: none;
+          margin: 0 30px 0 30px;
+          @include mix.all-height;
+          padding: 0;
+
+          li {
+            @include mix.hover-height;
+            @include mix.flex;
+
+            a {
+              @include mix.links;
+              font-size: lock.$f-s-small;
+              font-weight: lock.$f-w-bold;
+              letter-spacing: 1px;
+              cursor: lock.$pointer;
+            }
+          }
+
+          li .biggers {
+            font-size: 26px;
+            letter-spacing: -1px;
+          }
+        }
+
+        .hamburger {
+          @include mix.none;
+        }
+      }
+
+      .search__container {
+        @include mix.flex;
+        cursor: lock.$pointer;
+
+        img {
+          width: 15px;
+          margin-right: -25px;
+          position: relative;
+          z-index: 3;
+        }
+
+        input {
+          background-color: lock.$input-bg;
+          padding: 12px 10px 12px 30px;
+          border: none;
+        }
+
+        input::placeholder {
+          color: lock.$white-text-color;
+          font-size: lock.$f-s-small;
+          font-weight: lock.$f-w-bold;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .logo__container {
+    a {
+      margin-right: 70px !important;
+    }
+  }
+
+  .search__container {
+    img {
+      width: 28px !important;
+      padding-left: 0 !important;
+      margin: 0 !important;
+    }
+
+    input {
+      @include mix.none;
+    }
+  }
+
+  #culture {
+    @include mix.none;
+  }
+
+  .search__container:hover {
+    height: 70%;
+    border-bottom: lock.$bb white ;
+  }
+}
+
+@media (max-width: 1007px) {
+  .logo__container {
+    a {
+      margin-right: 10px !important;
+
+      span {
+        @include mix.none;
+      }
+    }
+  }
+}
+
+@media (max-width: 899px) {
+  #future {
+    @include mix.none;
+  }
+}
+
+@media (max-width: 799px) {
+  #travel {
+    @include mix.none;
+  }
+}
+
+@media (max-width: 729px) {
+  #worklife {
+    @include mix.none;
+  }
+}
+
+@media (max-width: 649px) {
+  #reel {
+    @include mix.none;
+  }
+}
+
+@media (max-width: 599px) {
+  .logo__container {
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: flex-start !important;
+
+    .img-bbc {
+      @include mix.flex;
+      justify-content: center;
+      @include mix.all-width;
+    }
+
+    .account {
+      a {
+        padding-left: 10px !important;
+      }
+    }
+  }
+
+  hr {
+    @include mix.none;
+  }
+
+  .double {
+    width: fit-content !important;
+
+    .features {
+      ul {
+        display: none !important;
+
+        li {
+          @include mix.none;
+        }
+      }
+
+      .hamburger {
+        display: block !important;
+        margin-right: 20px;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+// hoovering
+
+.account:hover {
+  border-bottom: lock.$bb blue;
+}
+
+.features ul li:hover {
+  border-bottom: lock.$bb;
+}
+#home {
+  border-bottom-color: white;
+}
+
+#news {
+  border-bottom-color: red;
+}
+
+#sport {
+  border-bottom-color: yellow;
+}
+
+#reel {
+  border-bottom-color: blue;
+}
+
+#worklife {
+  border-bottom-color: darkblue;
+}
+
+#travel {
+  border-bottom-color: darkolivegreen
+}
+
+#future {
+  border-bottom-color: darkslateblue;
+}
+
+#culture {
+  border-bottom-color: rgb(64, 7, 88);
+}
+
+.features .hamburger:hover {
+  border-bottom-color: lock.$bb white;
+}

@@ -1,0 +1,193 @@
+.add {
+  background-color: #eeeeee;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+.add .add__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome__container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.welcome__container .welcome__title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.welcome__container .welcome__title .title {
+  font-size: 22px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+.welcome__container .welcome__title .date {
+  font-size: 22px;
+  opacity: 0.6;
+}
+.welcome__container .welcome__content {
+  flex-grow: 1;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "one one two three" "one one four five";
+  gap: 15px;
+  row-gap: 10px;
+  color: #fff;
+}
+.welcome__container .welcome__content-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 10px;
+  cursor: pointer;
+}
+.welcome__container .welcome__content-card h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.welcome__container .welcome__content-card p {
+  font-size: 16px;
+}
+.welcome__container .welcome__content .one {
+  grid-area: one;
+  background: linear-gradient(to bottom, transparent, black), url("../images/welcome/_125729571_hill_healy_composite.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.welcome__container .welcome__content .one h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.welcome__container .welcome__content .two {
+  grid-area: two;
+  background: linear-gradient(to bottom, transparent, black), url("../images/welcome/_125728092_tv077053719.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.welcome__container .welcome__content .three {
+  grid-area: three;
+  background: linear-gradient(to bottom, transparent, black), url("../images/welcome/_125713853_gettyimages-1241611675.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.welcome__container .welcome__content .four {
+  grid-area: four;
+  background: linear-gradient(to bottom, transparent, black), url("../images/welcome/_122365935_pe_00859089.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.welcome__container .welcome__content .five {
+  grid-area: five;
+  background: linear-gradient(to bottom, transparent, black), url("../images/welcome/_125728123_gettyimages-1406237381.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1279px) {
+  .welcome__content .welcome__content-card h2 {
+    font-weight: 600;
+  }
+  .welcome__content .one h2 {
+    font-weight: 600 !important;
+  }
+}
+@media (max-width: 1008px) {
+  .welcome__content {
+    grid-template-areas: "one one" "one one" "two three" "four five" !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+  }
+}
+@media (max-width: 599px) {
+  .welcome__title {
+    display: none !important;
+  }
+
+  .welcome__content {
+    grid-template-areas: "one" "two" "three" "four" "five" !important;
+    grid-template-rows: 50% repeat(4, 1fr) !important;
+    grid-template-columns: 1fr !important;
+  }
+  .welcome__content .one h2 {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  .welcome__content .one p {
+    display: none;
+  }
+  .welcome__content .two,
+.welcome__content .three,
+.welcome__content .four,
+.welcome__content .five {
+    color: black;
+    background: transparent !important;
+    border-bottom: 2px solid #eeeeee;
+    padding: 5px 0 5px;
+  }
+  .welcome__content .two h2,
+.welcome__content .three h2,
+.welcome__content .four h2,
+.welcome__content .five h2 {
+    margin: 0;
+    font-size: 16px;
+  }
+}
+.welcome__content .one:hover {
+  background: linear-gradient(to bottom, transparent, 60%, rgba(0, 0, 0, 0.8)), linear-gradient(to top, transparent, 40%, rgba(255, 255, 255, 0.2)), url("../images/welcome/_125729571_hill_healy_composite.jpg");
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.welcome__content .two:hover {
+  grid-area: two;
+  background: linear-gradient(to bottom, transparent, 60%, rgba(0, 0, 0, 0.8)), linear-gradient(to top, transparent, 40%, rgba(255, 255, 255, 0.2)), url("../images/welcome/_125728092_tv077053719.jpg");
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.welcome__content .three:hover {
+  grid-area: three;
+  background: linear-gradient(to bottom, transparent, 60%, rgba(0, 0, 0, 0.8)), linear-gradient(to top, transparent, 40%, rgba(255, 255, 255, 0.2)), url("../images/welcome/_125713853_gettyimages-1241611675.jpg");
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.welcome__content .four:hover {
+  grid-area: four;
+  background: linear-gradient(to bottom, transparent, 60%, rgba(0, 0, 0, 0.8)), linear-gradient(to top, transparent, 40%, rgba(255, 255, 255, 0.2)), url("../images/welcome/_122365935_pe_00859089.jpg");
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.welcome__content .five:hover {
+  grid-area: five;
+  background: linear-gradient(to bottom, transparent, 60%, rgba(0, 0, 0, 0.8)), linear-gradient(to top, transparent, 40%, rgba(255, 255, 255, 0.2)), url("../images/welcome/_125728123_gettyimages-1406237381.jpg");
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}/*# sourceMappingURL=add-welcome-section.css.map */

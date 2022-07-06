@@ -1,0 +1,260 @@
+header {
+  background-color: black;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .header__container {
+  color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header__container .logo__container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+header .header__container .logo__container #bbc {
+  width: 112px;
+  height: 32px;
+  cursor: pointer;
+}
+header .header__container .logo__container .account {
+  height: 70%;
+  display: flex;
+  align-items: center;
+}
+header .header__container .logo__container .account a {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-right: 100px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+header .header__container .logo__container .account a img {
+  width: 28px;
+  margin-right: 6px;
+}
+header .header__container .logo__container hr {
+  height: 40%;
+  border: 0.1px solid rgb(49, 49, 49);
+}
+header .header__container .double {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+header .header__container .double .features {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+header .header__container .double .features ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0 30px 0 30px;
+  height: 100%;
+  padding: 0;
+}
+header .header__container .double .features ul li {
+  height: 70%;
+  display: flex;
+  align-items: center;
+}
+header .header__container .double .features ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+header .header__container .double .features ul li .biggers {
+  font-size: 26px;
+  letter-spacing: -1px;
+}
+header .header__container .double .features .hamburger {
+  display: none;
+}
+header .header__container .double .search__container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+header .header__container .double .search__container img {
+  width: 15px;
+  margin-right: -25px;
+  position: relative;
+  z-index: 3;
+}
+header .header__container .double .search__container input {
+  background-color: #212224;
+  padding: 12px 10px 12px 30px;
+  border: none;
+}
+header .header__container .double .search__container input::-moz-placeholder {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+header .header__container .double .search__container input:-ms-input-placeholder {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+header .header__container .double .search__container input::placeholder {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1279px) {
+  .logo__container a {
+    margin-right: 70px !important;
+  }
+
+  .search__container img {
+    width: 28px !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+  }
+  .search__container input {
+    display: none;
+  }
+
+  #culture {
+    display: none;
+  }
+
+  .search__container:hover {
+    height: 70%;
+    border-bottom: 2px solid white;
+  }
+}
+@media (max-width: 1007px) {
+  .logo__container a {
+    margin-right: 10px !important;
+  }
+  .logo__container a span {
+    display: none;
+  }
+}
+@media (max-width: 899px) {
+  #future {
+    display: none;
+  }
+}
+@media (max-width: 799px) {
+  #travel {
+    display: none;
+  }
+}
+@media (max-width: 729px) {
+  #worklife {
+    display: none;
+  }
+}
+@media (max-width: 649px) {
+  #reel {
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  .logo__container {
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: flex-start !important;
+  }
+  .logo__container .img-bbc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .logo__container .account a {
+    padding-left: 10px !important;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .double {
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+  }
+  .double .features ul {
+    display: none !important;
+  }
+  .double .features ul li {
+    display: none;
+  }
+  .double .features .hamburger {
+    display: block !important;
+    margin-right: 20px;
+  }
+  .double .features .hamburger img {
+    width: 24px;
+    height: 24px;
+  }
+}
+.account:hover {
+  border-bottom: 2px solid blue;
+}
+
+.features ul li:hover {
+  border-bottom: 2px solid;
+}
+
+#home {
+  border-bottom-color: white;
+}
+
+#news {
+  border-bottom-color: red;
+}
+
+#sport {
+  border-bottom-color: yellow;
+}
+
+#reel {
+  border-bottom-color: blue;
+}
+
+#worklife {
+  border-bottom-color: darkblue;
+}
+
+#travel {
+  border-bottom-color: darkolivegreen;
+}
+
+#future {
+  border-bottom-color: darkslateblue;
+}
+
+#culture {
+  border-bottom-color: rgb(64, 7, 88);
+}
+
+.features .hamburger:hover {
+  border-bottom-color: 2px solid white;
+}/*# sourceMappingURL=header.css.map */

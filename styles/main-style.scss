@@ -1,0 +1,110 @@
+@use "mixins.scss" as mix;
+@use "variables.scss" as lock;
+
+body {
+  @include mix.all-width;
+  height: 1000vh;
+  margin: 0;
+}
+
+body * {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: trasnform .35s ease-in-out;
+}
+
+.header__container * {
+  white-space: nowrap;
+}
+
+.header__container,
+.add__container,
+.welcome__container,
+.main, .footer {
+  max-width: 1240px;
+  @include mix.all-width;
+}
+
+.add {
+  @include mix.all-width;
+}
+
+.welcome {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  height: 5%;
+}
+
+.card-scope {
+  @include mix.flex;
+
+  .scope-color {
+    border: 1px solid;
+    height: 60%;
+    margin-right: 10px;
+  }
+
+  .red {
+    border-color: red;
+  }
+
+  .yellow {
+    border-color: yellow;
+  }
+
+  .lightBlue {
+    border-color: lightblue;
+  }
+
+  .green {
+    border-color: green;
+  }
+
+  .black {
+    border-color: black;
+  }
+
+  .scope {
+    color: lock.$scope-color;
+    font-size: lock.$f-s-small;
+  }
+}
+
+.add__container-text {
+  max-width: 970px;
+  @include mix.all-width;
+  text-align: right;
+  opacity: 0.8;
+  font-size: lock.$f-s-small;
+  font-weight: lock.$f-w-bold;
+}
+
+main {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1279px) {
+  .header__container, .footer {
+    max-width: 950px;
+  }
+
+  .welcome, .main {
+    padding: 0 10px 0 10px;
+  }
+}
+
+@media (max-width: 1007px) {
+  .header__container {
+    padding: 0 20px 0 10px;
+  }
+
+  .welcome {
+    height: 8%;
+  }
+}
+
+@media (max-width: 599px) {
+  .welcome {
+    height: 6% !important;
+  }
+}

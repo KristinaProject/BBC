@@ -1,0 +1,46 @@
+@use "variables" as lock;
+
+@mixin all-width {
+  width: 100%;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin j-c-center {
+  justify-content: center;
+}
+
+@mixin all-height {
+  height: 100%;
+}
+
+@mixin hover-height {
+  height: 70%;
+}
+
+@mixin links {
+  color: lock.$white-text-color;
+  text-decoration: none;
+}
+
+@mixin none {
+  display: none;
+}
+
+@mixin grid {
+  display: grid;
+}
+
+@mixin bg-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin blur-bg {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+}

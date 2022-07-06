@@ -1,0 +1,229 @@
+@use "variables" as lock;
+@use "mixins" as mix;
+
+.add {
+  background-color: lock.$bg-grey;
+  width: 100%;
+  @include mix.flex;
+  @include mix.j-c-center;
+  padding: 10px 0 10px 0;
+
+  .add__container {
+    @include mix.flex;
+    flex-direction: column;
+  }
+}
+
+.welcome__container {
+  margin: 0 auto;
+  @include mix.flex;
+  flex-direction: column;
+  @include mix.all-height;
+
+  .welcome__title {
+    @include mix.all-width;
+    @include mix.flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    .title {
+      font-size: lock.$title-big;
+      font-weight: lock.$f-w-bold;
+      opacity: lock.$title-opacity;
+    }
+
+    .date {
+      font-size: lock.$title-big;
+      opacity: lock.$date-opacity;
+    }
+  }
+
+  .welcome__content {
+    flex-grow: 1;
+    @include mix.all-height;
+    @include mix.grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "one one two three"
+      "one one four five";
+    gap: 15px;
+    row-gap: 10px;
+    color: lock.$white-text-color;
+
+    &-card {
+      @include mix.flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 10px;
+      cursor: lock.$pointer;
+
+      h2 {
+        font-size: lock.$card-title;
+        font-weight: lock.$title-normal;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .one {
+      h2 {
+        font-size: 30px;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+      grid-area: one;
+      background: linear-gradient(to bottom, transparent, black),
+        url("../images/welcome/_125729571_hill_healy_composite.jpg");
+      @include mix.bg-img;
+    }
+
+    .two {
+      grid-area: two;
+      background: linear-gradient(to bottom, transparent, black),
+        url("../images/welcome/_125728092_tv077053719.jpg");
+      @include mix.bg-img;
+    }
+
+    .three {
+      grid-area: three;
+      background: linear-gradient(to bottom, transparent, black),
+        url("../images/welcome/_125713853_gettyimages-1241611675.jpg");
+      @include mix.bg-img;
+    }
+
+    .four {
+      grid-area: four;
+      background: linear-gradient(to bottom, transparent, black),
+        url("../images/welcome/_122365935_pe_00859089.jpg");
+      @include mix.bg-img;
+    }
+
+    .five {
+      grid-area: five;
+      background: linear-gradient(to bottom, transparent, black),
+        url("../images/welcome/_125728123_gettyimages-1406237381.jpg");
+      @include mix.bg-img;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .welcome__content {
+    .welcome__content-card {
+      h2 {
+        font-weight: lock.$f-w-bold;
+      }
+    }
+    .one {
+      h2 {
+        font-weight: lock.$f-w-bold !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 1008px) {
+  .welcome__content {
+    grid-template-areas:
+      "one one"
+      "one one"
+      "two three"
+      "four five" !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+  }
+}
+
+@media (max-width: 599px) {
+  .welcome__title {
+    display: none !important;
+  }
+
+  .welcome__content {
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five" !important;
+    grid-template-rows: 50% repeat(4, 1fr) !important;
+    grid-template-columns: 1fr !important;
+
+    .one {
+      h2 {
+        font-size: lock.$card-title !important;
+        margin-bottom: 10px !important;
+      }
+
+      p {
+        display: none;
+      }
+    }
+
+    .two,
+    .three,
+    .four,
+    .five {
+      color: lock.$text-black;
+      background: transparent !important;
+      border-bottom: lock.$bb lock.$bg-grey;
+      padding: 5px 0 5px;
+
+      h2 {
+        margin: 0;
+        font-size: lock.$title-smaller;
+      }
+    }
+  }
+}
+
+//hoover
+.welcome__content {
+  .one:hover {
+    background: linear-gradient(to bottom, transparent, 60%, rgba(0, 0, 0, 0.8)),
+    linear-gradient(to top, transparent, 40%, rgba(255, 255, 255, 0.2)),
+      url("../images/welcome/_125729571_hill_healy_composite.jpg");
+    box-shadow: lock.$shadow-inset;
+    @include mix.bg-img;
+  }
+
+  .two:hover {
+    grid-area: two;
+    background: linear-gradient(to bottom, transparent, 60%, rgba(0, 0, 0, 0.8)),
+    linear-gradient(to top, transparent, 40%, rgba(255, 255, 255, 0.2)),
+      url("../images/welcome/_125728092_tv077053719.jpg");
+    box-shadow: lock.$shadow-inset;
+    @include mix.bg-img;
+  }
+
+  .three:hover {
+    grid-area: three;
+    background: linear-gradient(to bottom, transparent, 60%, rgba(0, 0, 0, 0.8)),
+    linear-gradient(to top, transparent, 40%, rgba(255, 255, 255, 0.2)),
+      url("../images/welcome/_125713853_gettyimages-1241611675.jpg");
+    box-shadow: lock.$shadow-inset;
+    @include mix.bg-img;
+  }
+
+  .four:hover {
+    grid-area: four;
+    background: linear-gradient(to bottom, transparent, 60%, rgba(0, 0, 0, 0.8)),
+    linear-gradient(to top, transparent, 40%, rgba(255, 255, 255, 0.2)),
+      url("../images/welcome/_122365935_pe_00859089.jpg");
+    box-shadow: lock.$shadow-inset;
+    @include mix.bg-img;
+  }
+
+  .five:hover {
+    grid-area: five;
+    background: linear-gradient(to bottom, transparent, 60%, rgba(0, 0, 0, 0.8)),
+      linear-gradient(to top, transparent, 40%, rgba(255, 255, 255, 0.2)),
+      url("../images/welcome/_125728123_gettyimages-1406237381.jpg");
+    box-shadow: lock.$shadow-inset;
+    @include mix.bg-img;
+  }
+}

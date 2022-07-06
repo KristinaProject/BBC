@@ -1,0 +1,34 @@
+// @use 'mixins' as mix;
+
+//colors
+$white-text-color: #fff;
+$bg-grey: #eeeeee;
+$input-bg: #212224;
+$input-bg-h: #3A3C3E;
+$scope-color: #979797;
+$text-black: black;
+$bg-white:#ffffff;
+$footer-bg: #4c4c4c;
+
+//fonts
+$f-s-small: 13px;
+$f-w-bold: 600;
+$title-big: 22px;
+$card-title: 20px;
+$title-normal: 400;
+$title-smaller: 16px;
+$thin-weight: 100;
+
+//border
+$bb: 2px solid;
+$bb-one: 1px solid;
+$bb-thin: 0.2px solid;
+$small-b-r: 10px;
+
+
+
+$pointer: pointer;
+$title-opacity: 0.7;
+$date-opacity: 0.6;
+$shadow-add: 0, 0, 10px, grey;
+$shadow-inset: inset 0 0 80px rgba(0, 0, 0, 20%);
